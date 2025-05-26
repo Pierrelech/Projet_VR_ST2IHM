@@ -334,9 +334,6 @@ public class RaycastGrab : MonoBehaviour
                     heldObject.transform.position = attachPoint.position;
                     heldObject.transform.rotation = attachPoint.rotation;
 
-                    // Désactiver le déplacement XR
-                    if (moveProvider != null)
-                        moveProvider.enabled = false;
                 }
             }
         }
