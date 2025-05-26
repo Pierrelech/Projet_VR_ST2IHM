@@ -62,6 +62,8 @@ public class ContainerScore : MonoBehaviour
             scoreText.text = "Score : " + score;
         }
     }
+    public int GetScore() { return score; }
+    public int GetErrors() { return error; }
     private IEnumerator FlashColor(Color color)
     {
         conteneurRenderer.material.color = color;
