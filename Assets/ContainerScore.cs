@@ -52,10 +52,11 @@ public class ContainerScore : MonoBehaviour
 
         }
 
-
-        UpdateScoreDisplay();
-        Destroy(other.gameObject);
-        
+        if (other.CompareTag("DechetJaune") || other.CompareTag("DechetVert") || other.CompareTag("DechetMarron"))
+        {
+            UpdateScoreDisplay();
+            Destroy(other.gameObject);
+        }
 
         
     }
