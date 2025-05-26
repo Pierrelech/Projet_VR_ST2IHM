@@ -11,7 +11,6 @@ public class DisplayName : MonoBehaviour
 
     void Start()
     {
-        // Assuming the text is the only child or named "NameText"
         nameText = transform.Find("NameText")?.gameObject;
 
         if (nameText != null)
