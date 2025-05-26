@@ -14,7 +14,7 @@ public class InteractionModeSelector : MonoBehaviour
 
     void Start()
     {
-        SetNative(); // on démarre en mode natif par défaut
+        SetGrab(); // on démarre en mode natif par défaut
     }
 
     public void SetGrab()
