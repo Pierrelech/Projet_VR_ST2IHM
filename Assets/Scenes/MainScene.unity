@@ -242,7 +242,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -48.680298, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -407,7 +407,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -82.944626, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -548,6 +548,7 @@ Transform:
   - {fileID: 196796570}
   - {fileID: 189560267}
   - {fileID: 158109686}
+  - {fileID: 732331723}
   m_Father: {fileID: 1426934794}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &92044647
@@ -2472,6 +2473,7 @@ GameObject:
   - component: {fileID: 378792516}
   - component: {fileID: 378792522}
   - component: {fileID: 378792521}
+  - component: {fileID: 378792523}
   m_Layer: 0
   m_Name: BouteilleVerre
   m_TagString: DechetVert
@@ -2781,6 +2783,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &378792523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 378792515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 402e5e6307c257d44b62361cb17b84b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &425240303
@@ -5070,6 +5084,7 @@ MonoBehaviour:
   - DechetMarron
   target: {fileID: 0}
   player: {fileID: 196796570}
+  orientation: {x: 0, y: -90, z: 0}
 --- !u!33 &732331720
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -6147,11 +6162,11 @@ Transform:
   m_GameObject: {fileID: 732331718}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.35, y: 0.05015, z: -6.54}
+  m_LocalPosition: {x: 0.165, y: 0.05015, z: -0.014}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 64475918}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &772273020
 GameObject:
@@ -6792,9 +6807,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8e9dcac4b9295e4c910e110df4ddd4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  performanceTracker: {fileID: 0}
-  endPanelUI: {fileID: 877440525}
-  sessionEnded: 0
 --- !u!4 &870228680
 Transform:
   m_ObjectHideFlags: 0
@@ -7375,11 +7387,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 668f5367df3b52c429ec55abf84c8774, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sessionStats: {fileID: 0}
-  timeText: {fileID: 894933187}
-  scoreText: {fileID: 1647526989}
-  errorsText: {fileID: 846346740}
-  totalTime: 0
 --- !u!4 &986097134
 Transform:
   m_ObjectHideFlags: 0
@@ -12976,7 +12983,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -64.5473, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -14483,7 +14490,6 @@ SceneRoots:
   - {fileID: 1529382094}
   - {fileID: 378792520}
   - {fileID: 1118427897}
-  - {fileID: 732331723}
   - {fileID: 425240304}
   - {fileID: 986097134}
   - {fileID: 870228680}
