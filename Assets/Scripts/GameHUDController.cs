@@ -24,7 +24,8 @@ public class GameHUDController : MonoBehaviour
 
     void Update()
     {
-        if (sessionEnded) return;
+        if (score + errors > 10) sessionEnded = true;
+        if (sessionEnded) EndSession(sessionEnded);
 
         timeElapsed += Time.deltaTime;
         UpdateHUD();
