@@ -4,6 +4,7 @@ using UnityEngine;
 public class UserDataExport : MonoBehaviour
 {
     public string fileName = "UserData.csv";
+    private bool finished = false;
 
     public void ExportData(float totalTime, int correct, int errors)
     {
@@ -25,9 +26,14 @@ public class UserDataExport : MonoBehaviour
             {
                 writer.WriteLine("Temps Total (s),Score,Erreurs");
             }
-
-            string line = $"{totalTime:F2},{correct},{errors}";
-            writer.WriteLine(line);
+            if (finished==false)
+            {
+                string line = $"{totalTime:F2},{correct},{errors}";
+                writer.WriteLine(line);
+                finished = true;
+            }
+            
+            
         }
 
 #if UNITY_EDITOR
