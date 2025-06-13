@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
-    path: Assets/Scenes/MainScene.unity
+    path: "Assets/Scenes/Gestion de D\xE9chets.unity"
     guid: 128e583bcd1a4b4439493d309052b056
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: af5feb46744cf7a4990b4ee06a125167,
