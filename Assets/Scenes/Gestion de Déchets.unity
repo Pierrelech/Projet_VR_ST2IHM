@@ -548,6 +548,7 @@ Transform:
   - {fileID: 196796570}
   - {fileID: 189560267}
   - {fileID: 158109686}
+  - {fileID: 732331723}
   m_Father: {fileID: 1426934794}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &92044647
@@ -4704,7 +4705,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -4767,7 +4768,6 @@ MonoBehaviour:
   - DechetMarron
   target: {fileID: 0}
   player: {fileID: 196796570}
-  orientation: {x: 0, y: 0, z: 0}
 --- !u!33 &732331720
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -5844,12 +5844,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 732331718}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.3, y: 0, z: 1.12}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 64475918}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &772273020
 GameObject:
@@ -8449,7 +8449,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!65 &1133043958
 BoxCollider:
@@ -12758,7 +12758,6 @@ SceneRoots:
   - {fileID: 1133043954}
   - {fileID: 1357645101}
   - {fileID: 686716779}
-  - {fileID: 732331723}
   - {fileID: 425240304}
   - {fileID: 986097134}
   - {fileID: 870228680}
