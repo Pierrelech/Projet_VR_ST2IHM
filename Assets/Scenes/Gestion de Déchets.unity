@@ -679,9 +679,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   total: 0
-  dechetvert: 0
-  dechetjaune: 0
-  dechetmarron: 0
+  DechetVert: 0
+  DechetJaune: 0
+  DechetMarron: 0
 --- !u!4 &127321470
 Transform:
   m_ObjectHideFlags: 0
@@ -7801,6 +7801,7 @@ MonoBehaviour:
   finalScoreText: {fileID: 1647526989}
   finalErrorsText: {fileID: 846346740}
   finalTimeText: {fileID: 894933187}
+  export: {fileID: 2132398151}
 --- !u!4 &1227099436
 Transform:
   m_ObjectHideFlags: 0
@@ -11481,6 +11482,51 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &2132398150
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2132398152}
+  - component: {fileID: 2132398151}
+  m_Layer: 0
+  m_Name: UserData
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2132398151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2132398150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1495e9b576124c64ab9a9a5d8dde8cfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fileName: UserData.csv
+--- !u!4 &2132398152
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2132398150}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.124398, y: -9.881114, z: 25.589329}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1586091355351672284
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11783,3 +11829,4 @@ SceneRoots:
   - {fileID: 261074290}
   - {fileID: 1227099436}
   - {fileID: 114965541}
+  - {fileID: 2132398152}

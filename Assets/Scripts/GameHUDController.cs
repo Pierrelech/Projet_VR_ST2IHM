@@ -17,6 +17,9 @@ public class GameHUDController : MonoBehaviour
     public TMP_Text finalErrorsText;
     public TMP_Text finalTimeText;
 
+    [Header("Export Data")]
+    public UserDataExport export;
+
     private int score = 0;
     private int errors = 0;
     private float timeElapsed = 0f;
@@ -63,6 +66,9 @@ public class GameHUDController : MonoBehaviour
         // Activer et afficher l'écran
         endScreenCanvas.SetActive(true);
         StartCoroutine(FadeInEndScreen());
+
+        //Envoeyr les données
+        export.ExportData(score, errors, Mathf.FloorToInt(timeElapsed));
     }
 
     System.Collections.IEnumerator FadeInEndScreen()
