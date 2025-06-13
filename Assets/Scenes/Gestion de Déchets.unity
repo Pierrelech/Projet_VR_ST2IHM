@@ -4767,6 +4767,7 @@ MonoBehaviour:
   - DechetMarron
   target: {fileID: 0}
   player: {fileID: 196796570}
+  orientation: {x: 0, y: 0, z: 0}
 --- !u!33 &732331720
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -5844,7 +5845,7 @@ Transform:
   m_GameObject: {fileID: 732331718}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.35, y: 0.05015, z: -6.54}
+  m_LocalPosition: {x: -3.3, y: 0, z: 1.12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

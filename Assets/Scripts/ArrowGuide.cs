@@ -5,6 +5,7 @@ public class ArrowGuide : MonoBehaviour
     public string[] dechetTags = { "DechetJaune", "DechetVert", "DechetMarron" }; // Liste des tags
     public Transform target;
     public Transform player; // Transform du joueur (ou référence centrale)
+    public Vector3 orientation = new Vector3(0, 0, 0);
 
     void Update()
     {
@@ -14,7 +15,7 @@ public class ArrowGuide : MonoBehaviour
         {
             Vector3 direction = target.position - transform.position;
             direction.y = 0; // reste à plat
-            transform.rotation = Quaternion.LookRotation(direction);
+            transform.rotation = Quaternion.LookRotation(direction) * Quaternion.Euler(orientation); ;
         }
     }
 
