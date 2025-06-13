@@ -57,13 +57,7 @@ public class ContainerScore : MonoBehaviour
             UpdateScoreDisplay();
             Destroy(other.gameObject);
         }
-<<<<<<< HEAD
-        
-        
-=======
->>>>>>> 1f3ba2f82a5ab88f2286f7711c92e3fbf4b73034
 
-        
     }
 
     private void UpdateScoreDisplay()
