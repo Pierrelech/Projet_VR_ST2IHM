@@ -43,7 +43,7 @@ public class VRMenuController : MonoBehaviour
         statsText.text = $"Total: {tm.total}\nVerre: {tm.dechetvert}\nEmballage: {tm.dechetjaune}\nAliment: {tm.dechetmarron}";
     }
 
-    void SpawnTrash()
+    public void SpawnTrash()
     {
         var prefab = trashPrefabs[Random.Range(0, trashPrefabs.Length)];
         Vector3 spawnPos = spawnArea.position + Random.insideUnitSphere * 0.3f;
@@ -51,5 +51,6 @@ public class VRMenuController : MonoBehaviour
 
         string type = prefab.tag.ToLower();
         TrashManager.Instance.AddTrash(type);
+        Debug.Log("ça marche fdp");
     }
 }
