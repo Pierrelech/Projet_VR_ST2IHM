@@ -40,7 +40,7 @@ public class VRMenuController : MonoBehaviour
     void UpdateStats()
     {
         var tm = TrashManager.Instance;
-        statsText.text = $"Total: {tm.total}\nVerre: {tm.glass}\nEmballage: {tm.packaging}\nAliment: {tm.food}";
+        statsText.text = $"Total: {tm.total}\nVerre: {tm.dechetvert}\nEmballage: {tm.dechetjaune}\nAliment: {tm.dechetmarron}";
     }
 
     void SpawnTrash()
