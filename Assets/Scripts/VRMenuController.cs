@@ -22,9 +22,9 @@ public class VRMenuController : MonoBehaviour
     {
         spawnButton.onClick.AddListener(SpawnTrash);
         menuCanvas.transform.SetParent(leftHand);
-        menuCanvas.transform.localPosition = new Vector3(0.15f, 0f, 0.1f);
-        menuCanvas.transform.localRotation = Quaternion.Euler(0, 180, 0);
-        menuCanvas.SetActive(false);
+        menuCanvas.transform.localPosition = new Vector3(0.15f, 0.15f, 0.1f);
+        menuCanvas.transform.localRotation = Quaternion.Euler(0, 0, 0);
+        menuCanvas.SetActive(true);
     }
 
     void Update()
