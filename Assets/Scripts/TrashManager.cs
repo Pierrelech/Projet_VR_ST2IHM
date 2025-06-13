@@ -5,9 +5,9 @@ public class TrashManager : MonoBehaviour
     public static TrashManager Instance;
 
     public int total = 0;
-    public int dechetvert = 0;
-    public int dechetjaune = 0;
-    public int dechetmarron = 0;
+    public int DechetVert = 0;
+    public int DechetJaune = 0;
+    public int DechetMarron = 0;
 
     void Awake()
     {
@@ -19,9 +19,9 @@ public class TrashManager : MonoBehaviour
         total++;
         switch (type)
         {
-            case "glass": dechetvert++; break;
-            case "packaging": dechetjaune++; break;
-            case "food": dechetmarron++; break;
+            case "DechetVert": DechetVert++; break;
+            case "DechetJaune": DechetJaune++; break;
+            case "DechetMarron": DechetMarron++; break;
         }
     }
 }
