@@ -18,13 +18,14 @@ public class VRMenuController : MonoBehaviour
     public GameObject[] trashPrefabs;
     public Transform spawnArea;
 
+
     void Start()
     {
         spawnButton.onClick.AddListener(SpawnTrash);
         menuCanvas.transform.SetParent(leftHand);
-        menuCanvas.transform.localPosition = new Vector3(0.15f, 0f, 0.1f);
-        menuCanvas.transform.localRotation = Quaternion.Euler(0, 180, 0);
-        menuCanvas.SetActive(false);
+        menuCanvas.transform.localPosition = new Vector3(0.15f, 0.2f, 0.1f);
+        menuCanvas.transform.localRotation = Quaternion.Euler(0, 0, 0);
+        menuCanvas.SetActive(true);
     }
 
     void Update()
@@ -40,16 +41,16 @@ public class VRMenuController : MonoBehaviour
     void UpdateStats()
     {
         var tm = TrashManager.Instance;
-        statsText.text = $"Total: {tm.total}\nVerre: {tm.dechetvert}\nEmballage: {tm.dechetjaune}\nAliment: {tm.dechetmarron}";
+        statsText.text = $"Total: {tm.total}\nVerre: {tm.DechetVert}\nEmballage: {tm.DechetJaune}\nAliment: {tm.DechetMarron}";
     }
 
-    void SpawnTrash()
+    public void SpawnTrash()
     {
         var prefab = trashPrefabs[Random.Range(0, trashPrefabs.Length)];
         Vector3 spawnPos = spawnArea.position + Random.insideUnitSphere * 0.3f;
         GameObject instance = Instantiate(prefab, spawnPos, Quaternion.identity);
 
-        string type = prefab.tag.ToLower(); // Assure-toi que tes prefabs ont un tag : "glass", "packaging", "food"
+        string type = prefab.tag;
         TrashManager.Instance.AddTrash(type);
     }
 }
