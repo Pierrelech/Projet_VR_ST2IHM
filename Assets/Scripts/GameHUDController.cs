@@ -31,9 +31,9 @@ public class GameHUDController : MonoBehaviour
         UpdateHUD();
     }
 
-    public void AddScore(int amount)
+    public void AddScore()
     {
-        score += amount;
+        score ++;
         UpdateHUD();
     }
 

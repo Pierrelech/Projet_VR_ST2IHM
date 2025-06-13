@@ -15,6 +15,7 @@ public class ContainerScore : MonoBehaviour
     public AudioClip successClip;
     public AudioClip errorClip;
     public int error = 0;
+    public GameHUDController gameHUDController;
 
 
 
@@ -38,6 +39,7 @@ public class ContainerScore : MonoBehaviour
 
 
             Debug.Log("Déchet accepté ! Score : " + score);
+            gameHUDController.AddScore();
 
             // Optionnel : détruire l'objet ou le désactiver
 
@@ -48,6 +50,7 @@ public class ContainerScore : MonoBehaviour
             StartCoroutine(FlashColor(incorrectColor));
             audioSource.PlayOneShot(errorClip);
             error++;
+            gameHUDController.AddError();
 
 
         }

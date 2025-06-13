@@ -601,7 +601,6 @@ public class RaycastDrag : MonoBehaviour
 
     private Transform draggedObject = null;
     private Rigidbody draggedRigidbody = null;
-    private CubeInteractionTracker tracker = null;
 
     private Plane dragPlane;
     private Vector3 dragStartPosition;
@@ -618,7 +617,6 @@ public class RaycastDrag : MonoBehaviour
                 {
                     draggedObject = hit.transform;
                     draggedRigidbody = draggedObject.GetComponent<Rigidbody>();
-                    tracker = draggedObject.GetComponent<CubeInteractionTracker>();
 
                     // Désactiver la physique pendant le drag
                     if (draggedRigidbody != null)
@@ -626,10 +624,6 @@ public class RaycastDrag : MonoBehaviour
                         draggedRigidbody.isKinematic = true;
                         draggedRigidbody.useGravity = false;
                     }
-
-                    // Tracker : chrono + essai
-                    if (tracker != null)
-                        tracker.OnGrab(null);
 
                     // Plan horizontal (XZ)
                     dragPlane = new Plane(Vector3.up, draggedObject.position);
@@ -672,8 +666,6 @@ public class RaycastDrag : MonoBehaviour
         // Fin du drag
         if (draggedObject != null && activateAction.action.WasReleasedThisFrame())
         {
-            if (tracker != null)
-                tracker.OnRelease(null);
 
             // Restauration de la physique
             if (draggedRigidbody != null)
@@ -689,7 +681,6 @@ public class RaycastDrag : MonoBehaviour
             // Reset
             draggedObject = null;
             draggedRigidbody = null;
-            tracker = null;
         }
     }
 }
