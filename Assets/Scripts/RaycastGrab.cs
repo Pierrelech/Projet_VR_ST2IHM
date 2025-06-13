@@ -304,7 +304,6 @@ public class RaycastGrab : MonoBehaviour
 
     private GameObject heldObject = null;
     private Rigidbody heldRigidbody = null;
-    private CubeInteractionTracker currentTracker = null;
 
     void Update()
     {
@@ -324,11 +323,6 @@ public class RaycastGrab : MonoBehaviour
                         heldRigidbody.isKinematic = true;
                         heldRigidbody.useGravity = false;
                     }
-
-                    // Tracker
-                    currentTracker = heldObject.GetComponent<CubeInteractionTracker>();
-                    if (currentTracker != null)
-                        currentTracker.OnGrab(null);
 
                     // Positionner l'objet au point de collision
                     heldObject.transform.position = attachPoint.position;
@@ -355,9 +349,6 @@ public class RaycastGrab : MonoBehaviour
                 heldRigidbody.useGravity = true;
             }
 
-            // Tracker
-            if (currentTracker != null)
-                currentTracker.OnRelease(null);
 
             // Réactiver le déplacement XR
             if (moveProvider != null)
@@ -366,7 +357,6 @@ public class RaycastGrab : MonoBehaviour
             // Reset
             heldObject = null;
             heldRigidbody = null;
-            currentTracker = null;
         }
     }
 }

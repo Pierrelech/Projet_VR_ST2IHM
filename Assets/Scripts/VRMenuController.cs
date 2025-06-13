@@ -49,7 +49,7 @@ public class VRMenuController : MonoBehaviour
         Vector3 spawnPos = spawnArea.position + Random.insideUnitSphere * 0.3f;
         GameObject instance = Instantiate(prefab, spawnPos, Quaternion.identity);
 
-        string type = prefab.tag.ToLower(); // Assure-toi que tes prefabs ont un tag : "glass", "packaging", "food"
+        string type = prefab.tag.ToLower();
         TrashManager.Instance.AddTrash(type);
     }
 }
