@@ -24,10 +24,11 @@ public class GameHUDController : MonoBehaviour
     private int errors = 0;
     private float timeElapsed = 0f;
     private bool sessionEnded = false;
+    private bool finished = false;
 
     void Update()
     {
-        if (score + errors > 10) sessionEnded = true;
+        if (score + errors >= 10) sessionEnded = true;
         if (sessionEnded) EndSession(sessionEnded);
 
         timeElapsed += Time.deltaTime;
@@ -58,8 +59,8 @@ public class GameHUDController : MonoBehaviour
         sessionEnded = true;
 
         // Remplir les valeurs de l'écran final
-        titleText.text = success ? "Bravo ! 🎉" : "Session terminée";
-        finalScoreText.text = $"Score final : {score}";
+        titleText.text = success ? "Bravo ! " : "Session terminée";
+        finalScoreText.text = $"Score final : {score} ";
         finalErrorsText.text = $"Nombre d'erreurs : {errors}";
         finalTimeText.text = $"Temps total : {Mathf.FloorToInt(timeElapsed)}s";
 
@@ -68,7 +69,12 @@ public class GameHUDController : MonoBehaviour
         StartCoroutine(FadeInEndScreen());
 
         //Envoeyr les données
-        export.ExportData(score, errors, Mathf.FloorToInt(timeElapsed));
+        if (finished == false)
+        {
+            export.ExportData(score, errors, Mathf.FloorToInt(timeElapsed));
+            finished = true;
+        }
+        
     }
 
     System.Collections.IEnumerator FadeInEndScreen()
